@@ -9,9 +9,9 @@
 #include "ofxScreenScale.h"
 
 void ofApp::setup(){
-	ofLogToConsole();
+    ofLogToConsole();
 
     float scale = ofxScreenScale::getScreenScale();
-	ofLogNotice("ofApp") << "screen scale: " << scale;
+    ofLogNotice("ofApp") << "screen scale: " << scale;
 }
 ```
