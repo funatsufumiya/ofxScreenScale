@@ -7,4 +7,7 @@ private:
     
 public:
     static float getScreenScale();
+
+    static void applyDrawScale();
+    static void applyImGuiScale();
 };

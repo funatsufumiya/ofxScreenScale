@@ -5,19 +5,6 @@
 
 ## Usage
 
-```cpp
-#include "ofxScreenScale.h"
-
-void ofApp::setup(){
-    ofLogToConsole();
-
-    float scale = ofxScreenScale::getScreenScale();
-    ofLogNotice("ofApp") << "screen scale: " << scale;
-}
-```
-
-## Notes
-
 - first, set proper window size on `main.cpp`:
 
 ```cpp
@@ -49,6 +36,9 @@ void ofApp::draw(){
     float scale = ofxScreenScale::getScreenScale();
     ofScale(scale, scale);
 
+    // or just call
+    // ofxScreenScale::applyDrawScale();
+
     // draw something...
 }
 ```
@@ -66,5 +56,8 @@ void ofApp::setup(){
     // apply font scaling to imgui
     auto&& io = ImGui::GetIO();
     io.FontGlobalScale = scale;
+
+    // or just call
+    // ofxScreenScale::applyImGuiScale();
 }
 ```
