@@ -7,6 +7,7 @@
 float ofxScreenScale::getScreenScale()
 {
 #if defined(_WIN32) || defined(_WIN64)
+	SetProcessDPIAware();
 	HDC screen = GetDC(NULL);
 	int dpi = GetDeviceCaps(screen, LOGPIXELSX);
 	ReleaseDC(NULL, screen);
