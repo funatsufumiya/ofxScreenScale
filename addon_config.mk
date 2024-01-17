@@ -15,11 +15,11 @@
 # and the PG will write to the console the kind of error and in which line it is
 
 meta:
-	ADDON_NAME = ofxAsync
-	ADDON_DESCRIPTION = Async addon
+	ADDON_NAME = ofxScreenScale
+	ADDON_DESCRIPTION = Get screen scale
 	ADDON_AUTHOR = Fumiya Funatsu
-	ADDON_TAGS = "async"
-	ADDON_URL = https://github.com/funatsufumiya/ofxAsync
+	ADDON_TAGS = "utility"
+	ADDON_URL = https://github.com/funatsufumiya/ofxScreenScale
 
 common:
 	# dependencies with other addons, a list of them separated by spaces 

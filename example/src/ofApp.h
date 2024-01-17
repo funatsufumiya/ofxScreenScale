@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAsync.h"
+#include "ofxScreenScale.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,7 +21,4 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
-        bool running = true;
-		bool has_finished = false;
 };

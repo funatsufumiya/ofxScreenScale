@@ -2,37 +2,25 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofxAsync::run([&](){
-        ofSleepMillis(500);
-        running = true;
-        ofSleepMillis(5000);
-        running = false;
-        has_finished = true;
-    });
+	ofLogToConsole();
+
+	ofLogNotice("ofApp") << "ofxScreenScale::getScreenScale(): " << ofxScreenScale::getScreenScale();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    ofSetWindowTitle(ofToString(ofGetFrameRate()));
-    ofxAsync::update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    if(has_finished){
-        ofSetColor(255, 0, 0);
-        ofDrawRectangle(0, 0, 400, 400);
-    }else if(running){
-        ofSetColor(0, 128, 255);
-        ofDrawRectangle(0, 0, 400, 400);
-    }
+	float screenScale = ofxScreenScale::getScreenScale();
+
+	// print screen scale as text
+	ofDrawBitmapStringHighlight("screen scale: " + ofToString(screenScale), 20, 20);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if(key == 'c'){
-        ofxAsync::stopAll();
-    }
 }
 
 //--------------------------------------------------------------
