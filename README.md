@@ -18,6 +18,30 @@ void ofApp::setup(){
 
 ## Notes
 
+- first, set proper window size on `main.cpp`:
+
+```cpp
+#include "ofMain.h"
+#include "ofApp.h"
+#include "ofxScreenScale.h"
+
+int main( ){
+
+	float scale = ofxScreenScale::getScreenScale();
+	ofLogNotice("main") << "Screen scale: " << scale;
+
+	ofGLWindowSettings settings;
+	settings.setSize(1024 * scale, 768 * scale); // <--
+	settings.windowMode = OF_WINDOW;
+
+	auto window = ofCreateWindow(settings);
+
+	ofRunApp(window, make_shared<ofApp>());
+	ofRunMainLoop();
+
+}
+```
+
 - if you want to apply scale, just `ofScale` on draw:
 
 ```cpp
