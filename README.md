@@ -1,6 +1,6 @@
 # ofxScreenScale
 
-- Get screen scale (ex: if using 4K screen, but setting 200% display)
+- Get screen scale on HiDPI display (ex: if using 4K screen, but setting 200% display)
 - openFrameworks addon (tested on oF v0.12.0)
 
 ## Usage
