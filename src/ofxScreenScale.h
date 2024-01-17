@@ -10,4 +10,7 @@ public:
 
     static void applyDrawScale();
     static void applyImGuiScale();
+
+    static float getScaledWidth();
+    static float getScaledHeight();
 };

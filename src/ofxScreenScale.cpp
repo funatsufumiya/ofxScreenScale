@@ -41,3 +41,15 @@ void ofxScreenScale::applyImGuiScale()
 	io.FontGlobalScale = scale;
 #endif
 }
+
+float ofxScreenScale::getScaledWidth()
+{
+	float scale = getScreenScale();
+	return ofGetWidth() / scale;
+}
+
+float ofxScreenScale::getScaledHeight()
+{
+	float scale = getScreenScale();
+	return ofGetHeight() / scale;
+}
